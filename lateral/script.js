@@ -1,9 +1,8 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const menuToggle = document.querySelector(".menu-toggle");
-    const sidebar = document.querySelector(".sidebar");
-  
-    menuToggle.addEventListener("click", () => {
-      sidebar.classList.toggle("hidden");
-    });
-  });
+const toggle = document.getElementById('menu-toggle');
+const sidebar = document.getElementById('sidebar');
+
+toggle.addEventListener('click', () => {
+  sidebar.classList.toggle('show');
+});
+
   

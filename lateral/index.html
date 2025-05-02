@@ -2,65 +2,65 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Horario Académico</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-  <header class="top-bar">
-    <button class="menu-toggle">&#9776;</button>
-    <div class="calendar">
-      <i class="icon-calendar"></i> Calendario Académico
-    </div>
-    <div class="user-profile">
-      <i class="icon-user"></i> Aaron Cisneros
-    </div>
+  <header>
+    <div class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></div>
+    <div class="calendar">Calendario Académico</div>
+    <div class="user">Aaron Cisneros <i class="fas fa-user-circle"></i></div>
   </header>
 
-  <div class="container">
-    <aside class="sidebar">
+  <div class="main-container">
+    <aside class="sidebar" id="sidebar">
       <div class="user-info">
-        <i class="icon-user"></i>
-        <p>Aaron Emilio<br />Quintana Cisneros</p>
-        <a href="#" class="logout">salir</a>
-        <a href="#" class="help">Ayuda</a>
+        <p>Aaron Emilio<br>Quintana Cisneros</p>
+        <a href="#"><i class="fas fa-sign-out-alt"></i> salir</a>
+        <a href="#"><i class="fas fa-question-circle"></i> Ayuda</a>
       </div>
+
       <nav class="nav-menu">
-        <a href="#">Asignaturas</a>
-        <a href="#">Asignaturas por Tutoria</a>
-        <a href="#">Cursos Especiales</a>
-        <a href="#">MoPI</a>
-        <a href="#">Horario</a>
-        <a href="#">Acompañamiento Docente</a>
-        <a href="#">Marco Regulatorio</a>
-        <a href="#">Mis Prestamos</a>
-        <a href="#">Guia Estudiantil</a>
+        <a href="#"><i class="fas fa-archive"></i> Asignaturas</a>
+        <a href="#"><i class="fas fa-chalkboard-teacher"></i> Asignaturas por Tutoría</a>
+        <a href="#"><i class="fas fa-database"></i> Cursos Especiales</a>
+        <a href="#"><i class="fas fa-file-alt"></i> MoPI</a>
+        <a href="#"><i class="fas fa-calendar-alt"></i> Horario</a>
+        <a href="#"><i class="fas fa-user-friends"></i> Acompañamiento Docente</a>
+        <a href="#"><i class="fas fa-folder"></i> Marco Regulatorio</a>
+        <a href="#"><i class="fas fa-hand-holding-usd"></i> Mis Préstamos</a>
+        <a href="#"><i class="fas fa-book"></i> Guía Estudiantil</a>
       </nav>
     </aside>
 
-    <main class="main-content">
-      <div class="home-header">
-        <i class="icon-home"></i> Home
+    <main class="content">
+      <div class="home-title">
+        <i class="fas fa-home"></i> Home
       </div>
-      <div class="horario-box">
-        <h2>Horario Academico</h2>
-        <p>- Programación Web<br />Grupo 1 - 10:00-11:40</p>
-        <p>- Análisis y diseño<br />Grupo 2 - 1:00-2:40</p>
+
+      <div class="academic-box">
+        <h3>Horario Académico</h3>
+        <p>- Programación Web<br>Grupo 1 - 10:00–11:40<br>- Análisis y diseño<br>Grupo 2 - 1:00–2:40</p>
       </div>
-      <div class="progress-box">
+
+      <div class="status-section">
         <div class="progress-circle">
-          <span>50%</span>
+          <i class="fas fa-spinner"></i>
+          <p>50%</p>
         </div>
-        <div class="date">
-          <span class="day">Mon Jun</span>
-          <span class="number">10</span>
+        <div class="date-box">
+          <span class="weekday">Mon Jun</span>
+          <span class="day">10</span>
         </div>
       </div>
-      <div class="event-list">
-        <label><input type="radio" name="evento"> REUNION</label><br />
-        <label><input type="radio" name="evento"> IMPORTANTE</label><br />
-        <label><input type="radio" name="evento"> PRUEBA DE WEB</label><br />
-        <label><input type="radio" name="evento"> CLASE DE ANALISIS</label>
+
+      <div class="reminder-section">
+        <label><input type="radio" name="recordatorio"> REUNIÓN</label>
+        <label><input type="radio" name="recordatorio" checked> IMPORTANTE</label>
+        <label><input type="radio" name="recordatorio"> PRUEBA DE WEB</label>
+        <label><input type="radio" name="recordatorio"> CLASE DE ANÁLISIS</label>
       </div>
     </main>
   </div>
@@ -68,4 +68,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-

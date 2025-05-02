@@ -1,165 +1,175 @@
+/* Reset y base */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Segoe UI", sans-serif;
-  }
-  
-  body {
-    display: flex;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f5f5;
+  color: #333;
+}
+
+/* Encabezado */
+header {
+  background-color: #009900;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 1.2rem;
+}
+
+.menu-toggle {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.calendar {
+  font-weight: bold;
+}
+
+.user {
+  font-size: 0.9rem;
+}
+
+/* Contenedor principal */
+.main-container {
+  display: flex;
+  min-height: calc(100vh - 60px);
+}
+
+/* Barra lateral */
+.sidebar {
+  background-color: #c0c0c0;
+  width: 320px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.user-info {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.user-info a {
+  display: block;
+  color: #000;
+  margin-top: 0.3rem;
+  text-decoration: none;
+}
+
+.nav-menu a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem;
+  background: white;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #000;
+  font-size: 0.95rem;
+  transition: background 0.3s;
+}
+
+.nav-menu a:hover {
+  background: #e0e0e0;
+}
+
+/* Contenido principal */
+.content {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.home-title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.academic-box {
+  background-color: #6f6f6f;
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.status-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.progress-circle {
+  width: 70px;
+  height: 70px;
+  background-color: #e8f5e9;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-circle i {
+  font-size: 1.2rem;
+  color: #009900;
+}
+
+.progress-circle p {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.date-box {
+  color: #0077ff;
+  font-size: 1.1rem;
+}
+
+.date-box .day {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/* Recordatorios */
+.reminder-section label {
+  display: block;
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-container {
     flex-direction: column;
-    height: 100vh;
-    color: #222;
-    background-color: #f2f2f2;
   }
-  
-  .top-bar {
-    background-color: #058c1e;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.7rem 1rem;
-  }
-  
-  .menu-toggle {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-  }
-  
-  .container {
-    display: flex;
-    flex: 1;
-    overflow: hidden;
-  }
-  
+
   .sidebar {
-    background-color: #c0c0c0;
-    width: 280px;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .content {
     padding: 1rem;
-    display: flex;
+  }
+
+  .status-section {
     flex-direction: column;
-    gap: 1rem;
+    align-items: flex-start;
   }
-  
-  .sidebar .user-info {
-    text-align: center;
+
+  .date-box .day {
+    font-size: 2.5rem;
   }
-  
-  .sidebar .user-info i {
-    font-size: 40px;
-  }
-  
-  .sidebar .logout,
-  .sidebar .help {
-    display: block;
-    margin: 5px auto;
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-  }
-  
-  .nav-menu a {
-    display: flex;
-    align-items: center;
-    padding: 0.5rem;
-    margin: 4px 0;
-    text-decoration: none;
-    color: black;
-    background: white;
-    border-radius: 8px;
-    transition: background 0.2s;
-  }
-  
-  .nav-menu a:hover {
-    background-color: #ddd;
-  }
-  
-  .main-content {
-    flex: 1;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .home-header {
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  
-  .horario-box {
-    background-color: #727272;
-    color: white;
-    padding: 1rem;
-    border-radius: 10px;
-  }
-  
-  .progress-box {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-  }
-  
-  .progress-circle {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: 6px solid #ccc;
-    border-top-color: #00c2c2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    animation: spin 2s linear infinite;
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  
-  .date .day {
-    color: #1d64f2;
-    font-weight: bold;
-  }
-  
-  .date .number {
-    font-size: 60px;
-    color: #0077ff;
-    font-weight: bold;
-  }
-  
-  .event-list label {
-    display: block;
-    margin: 5px 0;
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-    }
-  
-    .sidebar {
-      width: 100%;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-around;
-    }
-  
-    .main-content {
-      padding: 0.5rem;
-    }
-  
-    .progress-box {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  }
+}
+
+
   
